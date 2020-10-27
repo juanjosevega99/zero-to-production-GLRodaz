@@ -8,7 +8,7 @@ export default function Home() {
 
   const onChange = (key) => (event) => {
     const { value } = event.target;
-    setFormValues({...formValues, [key]: value });
+    setFormValues({ ...formValues, [key]: value });
   };
 
   return (
@@ -18,24 +18,24 @@ export default function Home() {
         flexDirection: "column",
       }}
     >
-      <Heading size="xl">Cuentame sobre ti</Heading>
+      <Heading size="xl">Tell me about you</Heading>
       <Spacer.Horizontal size="md" />
       <Input
         value={formValues.name}
         onChange={onChange("name")}
-        placeholder="Nombres"
+        placeholder="Names"
       />
       <Spacer.Horizontal size="sm" />
       <Input
         value={formValues.lastname}
         onChange={onChange("lastname")}
-        placeholder="Apellidos"
+        placeholder="LastNames"
       />
       <Spacer.Horizontal size="sm" />
       <Input
         value={formValues.email}
         onChange={onChange("email")}
-        placeholder="Correo electrónico"
+        placeholder="Email"
       />
       <Spacer.Horizontal size="lg" />
       <div
@@ -48,7 +48,7 @@ export default function Home() {
         <Button type="primary">Completa tu perfil</Button>
         <Spacer.Horizontal size="md" />
         <Button style={{}} type="tertiary">
-          Saltar este paso por ahora
+          Skip this step for now
         </Button>
       </div>
     </div>
