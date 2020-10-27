@@ -2,7 +2,7 @@
 This is an example project about how to create a complete web app using React with high interoperability.
 
 ## Creating a components library
-The project has been moved to https://github.com/glrodasz/cero-components
+The project has been moved to https://github.com/juanjosevega99/zero-to-prod-components
 
 ## Welcome to the Web
 ### Redux configuration [Web]
