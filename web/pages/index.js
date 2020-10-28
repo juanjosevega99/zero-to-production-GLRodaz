@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Head from "next/head";
 
 import { Heading, Input, Button, Spacer } from "@glrodasz/components";
 
@@ -23,13 +22,13 @@ export default function Home() {
       <Input
         value={formValues.name}
         onChange={onChange("name")}
-        placeholder="Names"
+        placeholder="Name"
       />
       <Spacer.Horizontal size="sm" />
       <Input
         value={formValues.lastname}
         onChange={onChange("lastname")}
-        placeholder="LastNames"
+        placeholder="LastName"
       />
       <Spacer.Horizontal size="sm" />
       <Input
@@ -45,7 +44,7 @@ export default function Home() {
           alignItems: "center",
         }}
       >
-        <Button type="primary">Completa tu perfil</Button>
+        <Button type="primary">Complete your profile</Button>
         <Spacer.Horizontal size="md" />
         <Button style={{}} type="tertiary">
           Skip this step for now
