@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-import { Heading, Input, Button, Spacer } from "@glrodasz/components";
+import {
+  Heading,
+  Input,
+  Button,
+  Spacer,
+  CenteredContent,
+} from "@glrodasz/components";
 
 export default function Home() {
   const [formValues, setFormValues] = useState({});
@@ -11,12 +17,7 @@ export default function Home() {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <CenteredContent>
       <Heading size="xl">Tell me about you</Heading>
       <Spacer.Horizontal size="md" />
       <Input
@@ -50,6 +51,6 @@ export default function Home() {
           Skip this step for now
         </Button>
       </div>
-    </div>
+    </CenteredContent>
   );
 }
