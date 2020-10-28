@@ -1,13 +1,15 @@
-import { Spacer, Heading, Avatar, Card, Icon } from "@glrodasz/components";
+import {
+  Spacer,
+  Heading,
+  Avatar,
+  Card,
+  Icon,
+  CenteredContent,
+} from "@glrodasz/components";
 
 export default function Home() {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <CenteredContent>
       <div style={{ display: "flex" }}>
         <Avatar src="https://placeimg.com/200/200/people" />
         <Spacer.Vertical size="xs" />
@@ -46,6 +48,6 @@ export default function Home() {
           Maria has checked in at Factoria
         </Heading>
       </Card>
-    </div>
+    </CenteredContent>
   );
 }
