@@ -1,7 +1,33 @@
 {
   "tasks": [
-    { "id": 1, "description": "json-server", "author": "typicode" },
-    { "id": 2, "description": "json-server", "author": "typicode" }
+    {
+      "id": 1,
+      "description": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "description": "json-server",
+      "author": "typicode"
+    },
+    {
+      "description": "New task",
+      "id": 3
+    },
+    {
+      "description": "New task",
+      "id": 4
+    },
+    {
+      "description": "New task",
+      "id": 5
+    },
+    {
+      "description": "New task",
+      "id": 10
+    }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "typicode"
+  }
 }
