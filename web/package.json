@@ -14,7 +14,9 @@
     "next": "9.5.3",
     "next-transpile-modules": "4.1.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-query": "2.25.2",
+    "react-query-devtools": "2.6.0"
   },
   "devDependencies": {
     "json-server": "0.16.2"

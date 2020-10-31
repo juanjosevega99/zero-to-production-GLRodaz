@@ -1,3 +1,4 @@
+import { ReactQueryDevtools } from "react-query-devtools";
 import { Container } from "@glrodasz/components";
 
 import "minireset.css";
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Container>
       <Component {...pageProps} />
+      <ReactQueryDevtools initialIsOpen />
     </Container>
   );
 }
