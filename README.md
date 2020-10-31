@@ -1,37 +1,38 @@
-# Cero a producción
+# Cero to production
 Zero to Production is a project in which we will build a productivity management application. In this series of live broadcasts, I will be revealing all the complications that a programmer has when building a web app. This project is live streamed in https://glrz.me/glrodasz.
 
 ## Components library
-The project is located [here](https://github.com/glrodasz/cero-components)
+The project is located [here](https://github.com/juanjosevega99/zero-to-prod-components)
 
 ## Welcome to the Web
 ### Install JSON Server
+- Install JSON server as a dev dependency `yarn add --dev json-server`
+- Create a file called `db.json`
+- Create an script `dev:api: "dev:api": "json-server --watch db.json --port 3001"`
 ### React Query
+- Install React Query `yarn add react-query`
 ### Folder Structure
+### Developing an Organism
 ### Environment variables
+### Events in Components
+### Error handling
+### Unit testing
+### Snapshot testing
+### Visual tests
+### Integration test
+
 
 ## Connecting both worlds
-### Developing an Organism
-### Configuring Hapi [Api]
-### Environment variables [Api]
-### Configuring Mongoose [Api]
-### Folder Structure [Api]
-### Developing a Service [Api]
-
-## Logging & Events
-### Events in Components [Web]
-### Error handling [Web]
-### Logging requests [Api]
-### Error handling [Api]
-
-## Testing
-### Unit testing [Web]
-### Snapshot testing [Web]
-### Visual tests [Components, Web]
-### Integration test [Web]
-### Unit testing [Api]
-### Integration test [Api]
-### End-to-end tests [Web]
+### Configuring Hapi
+### Environment variables
+### Configuring Mongoose
+### Folder Structure
+### Developing a Service
+### Logging requests
+### Error handling
+### Unit testing
+### Integration test
+### End-to-end tests
 
 ## i18n
 ### Supporting languages [Web]
