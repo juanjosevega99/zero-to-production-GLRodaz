@@ -38,19 +38,12 @@ export default function Home() {
         placeholder="Email"
       />
       <Spacer.Horizontal size="lg" />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+
         <Button type="primary">Complete your profile</Button>
         <Spacer.Horizontal size="md" />
         <Button style={{}} type="tertiary">
           Skip this step for now
         </Button>
-      </div>
     </CenteredContent>
   );
 }

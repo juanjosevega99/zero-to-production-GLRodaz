@@ -6,6 +6,8 @@ import {
   Avatar,
   Spacer,
   Heading,
+  Paragraph,
+  AddButton,
 } from "@glrodasz/components";
 
 import tasks from "../features/planning/api";
@@ -59,17 +61,20 @@ function Planning(props) {
               }}
             >
               <Heading size="lg">HI, Christian</Heading>
-              <Heading size="md" color="primary">
-                How do you want to start?
-              </Heading>
+              <Paragraph size="lg" weight="">
+                Know the methodology RETO
+              </Paragraph>
             </div>
           </div>
+          <Spacer.Horizontal size="lg" />
           <Heading size="lg">
             Now tell me, what is the first task you will work on today?
           </Heading>
+          <Spacer.Horizontal size="md" />
+          {/* <AddButton onAdd={(value) => addTask({ description: value })}>
           <button onClick={() => addTask({ description: "New task" })}>
             Tap to add the task
-          </button>
+          </AddButton> */}
           {data &&
             data.map((task) => {
               return (
@@ -84,10 +89,11 @@ function Planning(props) {
       }
       footer={
         <div>
-          <p>
-            Basados en la matriz de Eisenhower priorizamos tus tareas evitando
-            listas de pendientes saturadas.
-          </p>
+          <Paragraph size="sm">
+            Based on the Eisenhower matrix we prioritize your tasks avoiding
+            saturated to-do lists.
+          </Paragraph>
+          <Spacer.Horizontal size="sm" />
           <Button type="primary">Start now</Button>
         </div>
       }
