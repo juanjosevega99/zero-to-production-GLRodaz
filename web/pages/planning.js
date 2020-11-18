@@ -1,4 +1,4 @@
-import { useMutation, useQuery, useQueryCache } from "react-query";
+import { useQuery, useQueryCache, useMutation } from "react-query";
 
 import {
   FullHeightContent,
@@ -43,13 +43,7 @@ function Planning(props) {
   return (
     <FullHeightContent
       content={
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
+        <>
           <div style={{ display: "flex" }}>
             <Avatar src="https://placeimg.com/200/200/people" />
             <Spacer.Vertical size="xs" />
@@ -60,10 +54,8 @@ function Planning(props) {
                 alignItems: "flex-start",
               }}
             >
-              <Heading size="lg">HI, Christian</Heading>
-              <Paragraph size="lg" weight="">
-                Know the methodology RETO
-              </Paragraph>
+              <Heading size="lg">HI, Juan</Heading>
+              <Paragraph size="lg">Know the methodology RETO</Paragraph>
             </div>
           </div>
           <Spacer.Horizontal size="lg" />
@@ -71,21 +63,31 @@ function Planning(props) {
             Now tell me, what is the first task you will work on today?
           </Heading>
           <Spacer.Horizontal size="md" />
-          {/* <AddButton onAdd={(value) => addTask({ description: value })}>
-          <button onClick={() => addTask({ description: "New task" })}>
-            Tap to add the task
-          </AddButton> */}
           {data &&
             data.map((task) => {
               return (
-                <div>
-                  <Heading>{task.id}</Heading>
-                  <Heading>{task.description}</Heading>
-                  <button onClick={() => deleteTask({ id: task.id })}>X</button>
+                <div
+                  style={{ display: "flex", alignItems: "center" }}
+                  key={task.id}
+                >
+                  <Heading size="sm">{task.id}</Heading>
+                  <Spacer.Vertical size="xs" />
+                  <Paragraph>{task.description}</Paragraph>
+                  <Button
+                    type="secondary"
+                    isInline
+                    onClick={() => deleteTask({ id: task.id })}
+                  >
+                    X
+                  </Button>
                 </div>
               );
             })}
-        </div>
+          <Spacer.Horizontal size="md" />
+          <AddButton onAdd={(value) => addTask({ description: value })}>
+            Tap to add the task
+          </AddButton>
+        </>
       }
       footer={
         <div>
