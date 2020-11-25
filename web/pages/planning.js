@@ -85,20 +85,25 @@ function Planning(props) {
               );
             })}
           <Spacer.Horizontal size="md" />
-          <AddButton onAdd={(value) => addTask({ description: value })}>
+          <AddButton
+            onAdd={(value) => addTask({ description: value })}
+            focusHelpText="Presiona enter"
+            blurHelpText="Clic para continuar"
+          >
             Tap to add the task
           </AddButton>
         </>
       }
       footer={
-        <div>
+        <>
+          <Spacer.Horizontal size="lg" />
           <Paragraph size="sm">
             Based on the Eisenhower matrix we prioritize your tasks avoiding
             saturated to-do lists.
           </Paragraph>
           <Spacer.Horizontal size="sm" />
           <Button type="primary">Start now</Button>
-        </div>
+        </>
       }
     />
   );
