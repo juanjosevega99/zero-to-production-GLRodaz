@@ -1,30 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cero a producción
+Zero to Production is a project in which we will build a productivity management application. In this series of live broadcasts, I will be revealing all the complications that a programmer has when building a web app. This project is live streamed in https://glrz.me/glrodasz.
 
-## Getting Started
+## Components library
+The project is located [here](https://github.com/glrodasz/cero-components)
 
-First, run the development server:
+## Welcome to the Web
+### Install JSON Server
+- Install JSON server as a dev dependency `yarn add --dev json-server`
+- Create a file called `db.json`
+- Create an script `dev:api: "dev:api": "json-server --watch db.json --port 3001"`
+### React Query
+- Install React Query `yarn add react-query`
 
-```bash
-npm run dev
-# or
-yarn dev
+### Linting, Scritps
+Copy config files:
+* .commitlintrc.json
+* .eslintrc.json
+* .huskyrc.json
+* .lintstagedrc.json
+* .prettierrc.json
+* .stylelintrc.json
+* .jest.config.js (modified)
+* .jest.setup.js
+Add dependencies
 ```
+yarn add --dev npm-run-all @commitlint/cli @commitlint/config-conventional commitizen eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react husky jest lint-staged prettier stylelint stylelint-config-idiomatic-order stylelint-config-recommended @mapbox/stylelint-processor-arbitrary-tags
+```
+Copy scripts:
+```
+    "lint:css:fix": "yarn lint:css:prettier:fix && yarn lint:css:stylelint:fix",
+    "lint:css:prettier:fix": "yarn lint:css:prettier --write",
+    "lint:css:prettier": "prettier '**/*.css' --list-different --ignore-path .gitignore",
+    "lint:css:stylelint:fix": "yarn lint:css:stylelint --fix",
+    "lint:css:stylelint": "stylelint '**/*.css' --ignore-path .gitignore",
+    "lint:css": "run-s lint:css:stylelint lint:css:prettier",
+    "lint:fix": "run-p lint:js:fix lint:json:fix lint:css:fix ",
+    "lint:js:fix": "yarn lint:js --fix",
+    "lint:js": "eslint --cache --ignore-path .gitignore '**/*.js'",
+    "lint:json:fix": "yarn lint:json --write",
+    "lint:json": "prettier '**/*.json' --list-different --ignore-path .gitignore",
+    "lint": "run-p lint:js lint:json lint:css",
+    "test:watch": "CONSOLE_LEVEL=debug yarn test --watch",
+    "test": "jest"
+```
+### Folder Structure
+### Developing an Organism
+### Environment variables
+### Events in Components
+### Error handling
+### Unit testing
+### Snapshot testing
+### Visual tests
+### Integration test
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Connecting both worlds
+### Configuring Hapi
+### Environment variables
+### Configuring Mongoose
+### Folder Structure
+### Developing a Service
+### Logging requests
+### Error handling
+### Unit testing
+### Integration test
+### End-to-end tests
 
-## Learn More
+## i18n
+### Supporting languages [Web]
+### Supporting languages [Api]
 
-To learn more about Next.js, take a look at the following resources:
+## Bundling
+### Webpack configuration [Web]
+### Frontend Optimization [Web]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Emailing layer
+### Email template system [Api]
+### Setup email service [Api]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Continuous integration & deployment
+### Docker
+### Kubernetes
+### Jenkins
