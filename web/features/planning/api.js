@@ -1,3 +1,3 @@
-import { tasks } from "../../api";
+import { tasks } from '../../api'
 
-export default tasks;
+export default tasks
